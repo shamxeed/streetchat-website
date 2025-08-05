@@ -6,4 +6,4 @@ Streetchat is a modern social networking app designed to connect people within l
 
 ### Preview 👇🏻
 
-![Sample](https://github.com/shamxeed/streetchat-website/blob/main/streetchat.png)
+![Sample](https://github.com/shamxeed/streetchat-website/blob/main/assets/streetchat-website.png)
