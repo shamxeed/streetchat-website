@@ -82,7 +82,6 @@ export const Header = () => {
 
             <Link href={'https://streetchat.app/auth/sign-in'} passHref>
               <Button
-                // asChild
                 size='sm'
                 variant={'outline'}
                 className='hover:cursor-pointer'
@@ -93,7 +92,6 @@ export const Header = () => {
 
             <Link href={'https://streetchat.app/auth/sign-up'} passHref>
               <Button
-                // asChild
                 size='sm'
                 className=' bg-green-500 hover:bg-green-600 hover:cursor-pointer'
               >
@@ -156,9 +154,14 @@ export const Header = () => {
                       </Button>
                     </Link>
 
-                    <Link href={'https://streetchat.app/auth/sign-up'} passHref>
-                      <Button className='w-full'>Sign Up</Button>
-                    </Link>
+                    <div className='mt-2 md:mt-0'>
+                      <Link
+                        href={'https://streetchat.app/auth/sign-up'}
+                        passHref
+                      >
+                        <Button className='w-full bg-green-500'>Sign Up</Button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </SheetContent>
