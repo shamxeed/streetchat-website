@@ -12,7 +12,6 @@ import AndroidImagePath from '@/assets/google-play-badge.svg';
 const Badge = ({ src = IphoneImagePath, ...props }) => (
   <Image
     src={src}
-    // height={60}
     alt='streetchat-iphone'
     className='hover:cursor-pointer w-[150px] h-[60px] md:w-[150px] md:h-[50px]'
     {...props}
@@ -36,7 +35,7 @@ const Badges = () => {
 
         <Button
           onClick={handleClick}
-          className='flex items-center bg-black h-[48px] w-[150px] mt-2 hover:cursor-pointer md:mt-0'
+          className='flex items-center bg-black h-[48px] w-[150px] mt-2 hover:cursor-pointer lg:mt-0'
         >
           <Download size={30} />
           <span className='text-white'>Download APK</span>
