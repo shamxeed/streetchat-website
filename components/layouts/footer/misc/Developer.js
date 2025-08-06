@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Developer = () => {
   return (
-    <span className='font-bold text-gray-800 font-mono'>
+    <span className='font-bold text-gray-800 font-mono text-sm lg:text-base'>
       Developed by{' '}
       <Link
         target='_blank'

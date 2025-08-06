@@ -8,7 +8,9 @@ const Privacy = () => (
       </span>
     </Link>
 
-    <div className='w-6 flex  justify-center text-sm text-gray-600'>●</div>
+    <div className='w-6 flex  justify-center'>
+      <span className='text-[0.7rem] text-gray-600 lg:text-sm'>●</span>
+    </div>
 
     <Link href={'/terms-conditions'}>
       <span className='text-gray-800 hover:underline text-sm'>
