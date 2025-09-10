@@ -3,7 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { cn } from '@/lib/utils';
 import { Menu, Contact, Home } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -13,11 +12,8 @@ import {
   SheetClose,
 } from '@/components/ui/sheet';
 
-import LogoPath from '@/assets/logo.png';
-
 export const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [isScrolled, setIsScrolled] = React.useState(false);
 
   const navigationItems = [
     { name: 'Home', href: '/', icon: Home },
@@ -28,23 +24,11 @@ export const Header = () => {
     },
   ];
 
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <header
-      className={cn(
-        'sticky top-0 z-50 w-full transition-all duration-300',
-        isScrolled
-          ? 'bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'
-          : 'bg-white'
-      )}
+      className={
+        'sticky top-0 z-50 w-full transition-all duration-300 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'
+      }
     >
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex h-16 items-center justify-between'>
@@ -52,9 +36,11 @@ export const Header = () => {
           <div className='flex items-center'>
             <Link href='/' className='flex items-center space-x-2'>
               <Image
-                src={LogoPath}
+                width={25}
+                height={25}
+                src={'/logo.png'}
                 alt='streetchat logo'
-                className='w-[27px] h-[25px] md:w-10 md:h-9'
+                className='w-[25px] h-[25px] md:w-9 md:h-9'
               />
 
               <h1 className='text-xl font-bold text-green-800 font-mono'>
@@ -120,9 +106,11 @@ export const Header = () => {
                       onClick={() => setIsOpen(false)}
                     >
                       <Image
-                        src={LogoPath}
+                        width={25}
+                        height={25}
+                        src={'/logo.png'}
                         alt='streetchat logo'
-                        className='w-[27px] h-[25px]'
+                        className='w-[25px] h-[25px]'
                       />
                       <span className='font-bold text-xl'>Streetchat</span>
                     </Link>

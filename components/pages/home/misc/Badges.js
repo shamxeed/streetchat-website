@@ -6,12 +6,11 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Download, Timer } from 'lucide-react';
 
-import IphoneImagePath from '@/assets/app-store-badge.svg';
-import AndroidImagePath from '@/assets/google-play-badge.svg';
-
-const Badge = ({ src = IphoneImagePath, ...props }) => (
+const Badge = ({ src = '/app-store-badge.svg', ...props }) => (
   <Image
     src={src}
+    width={150}
+    height={50}
     alt='streetchat-iphone'
     className='hover:cursor-pointer w-[150px] h-[60px] md:w-[150px] md:h-[50px]'
     {...props}
@@ -55,7 +54,7 @@ const options = [
   {
     id: '2',
     title: 'android',
-    src: AndroidImagePath,
     alt: 'streetchat-android',
+    src: '/google-play-badge.svg',
   },
 ];
