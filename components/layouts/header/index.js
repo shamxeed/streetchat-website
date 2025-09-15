@@ -43,8 +43,8 @@ export const Header = () => {
                 className='w-[25px] h-[25px] md:w-9 md:h-9'
               />
 
-              <h1 className='text-xl font-bold text-green-800 font-mono'>
-                Streetchat
+              <h1 className='text-xl font-semibold text-green-800 font-poppins'>
+                STREETCHAT
               </h1>
             </Link>
           </div>
@@ -59,30 +59,20 @@ export const Header = () => {
                   className='text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 relative group'
                 >
                   {item.name}
-                  <span className='absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full'></span>
+                  <span className='absolute -bottom-1 left-0 w-0 h-0.5 bg-green-600 transition-all duration-200 group-hover:w-full'></span>
                 </Link>
               ))}
             </nav>
 
             <div className='mr-2' />
 
-            <Link href={'https://streetchat.app/auth/sign-in'} passHref>
-              <Button
-                size='sm'
-                variant={'outline'}
-                className='hover:cursor-pointer'
-              >
-                Sign In
-              </Button>
-            </Link>
-
-            <Link href={'https://streetchat.app/auth/sign-up'} passHref>
+            <Link href={'https://streetchat.app'} passHref>
               <Button
                 size='sm'
                 className=' bg-green-500 hover:bg-green-600 hover:cursor-pointer'
               >
                 {' '}
-                Sign Up{' '}
+                Get Started{' '}
               </Button>
             </Link>
           </div>
@@ -112,7 +102,9 @@ export const Header = () => {
                         alt='streetchat logo'
                         className='w-[25px] h-[25px]'
                       />
-                      <span className='font-bold text-xl'>Streetchat</span>
+                      <span className='font-bold text-l text-green-800'>
+                        STREETCHAT
+                      </span>
                     </Link>
                   </div>
 
@@ -136,18 +128,11 @@ export const Header = () => {
 
                   {/* Mobile CTA Buttons */}
                   <div className='mt-auto p-3 border-t space-y-3 border-green-600'>
-                    <Link href={'https://streetchat.app/auth/sign-in'} passHref>
-                      <Button variant='outline' className='w-full '>
-                        Sign In
-                      </Button>
-                    </Link>
-
                     <div className='mt-2 md:mt-0'>
-                      <Link
-                        href={'https://streetchat.app/auth/sign-up'}
-                        passHref
-                      >
-                        <Button className='w-full bg-green-500'>Sign Up</Button>
+                      <Link href={'https://streetchat.app'} passHref>
+                        <Button className='w-full bg-green-500'>
+                          Get Started
+                        </Button>
                       </Link>
                     </div>
                   </div>
